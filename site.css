@@ -1,5 +1,5 @@
 .bpw-floating-button {
-    display: none;
+    display: none!important;
 }
 bp-web-widget-container {
 display: none!important;
