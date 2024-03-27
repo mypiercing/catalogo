@@ -1,6 +1,9 @@
 .bpw-floating-button {
     display: none;
 }
+bp-web-widget-container {
+display: none!important;
+}
 
 .product h3 {
     text-align: center;
