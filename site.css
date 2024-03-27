@@ -1,4 +1,6 @@
-/* CSS para o pop-up */
+.bpw-floating-button {
+    display: none;
+}
 
 .product h3 {
     text-align: center;
