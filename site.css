@@ -1,3 +1,27 @@
+/* CSS para o pop-up */
+
+.product h3 {
+    text-align: center;
+}
+.product-details .popup-title {
+    text-align: center;
+    width: 100%;
+    order: -1; /* Isso coloca o título acima de todos os elementos .size */
+    font-size: 20px; /* Ajuste conforme necessário */
+    margin-bottom: 20px; /* Espaço entre o título e as colunas */
+}
+
+.sizes h4.popup-title {
+    display: none;
+}
+.product .measure-title {
+    display: none; /* ou visibility: hidden; */
+}
+
+.popup .measure-title {
+    display: block; /* ou visibility: visible; */
+}
+
 /* Estilo do botão de carrinho */
 .cart-button {
     position: fixed;
@@ -293,7 +317,7 @@ body {
     align-content: flex-end;
     align-items: center;
     justify-content: center;
-    min-width: 150px;
+    min-width: 80px;
 }
 .colors .color {
     background-color: #444;
@@ -380,6 +404,27 @@ button.color {
     -webkit-user-select: none;
     touch-action: manipulation;
     align-items: center;
+}
+.product-container .product .product-details .popup-title {
+display: none;
+}
+button.color-large {
+        width: 95px;
+        background-color: #444;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid #979797;
+        color: #000;
+        font-size: 15px;
+        margin: 2px;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        height: 41px;
+        align-items: center;
+    }
+.shipping {
+font-size: 18;
 }
 #popup {
     position: fixed;
@@ -484,11 +529,7 @@ button.color:focus:active {
     margin: 3px 0;
     text-align: center;
 }
-#popup .popup-sizes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 #popup .popup-sizes .sizes {
     width: 100%;
     max-width: 250px;
@@ -510,6 +551,48 @@ button.color:focus:active {
     padding: 0 10px;
     box-shadow: -3px 0px 20px 0px #00000085;
     z-index: 19;
+}
+
+    button.colortwo[data-color="Natural"] {
+        background-image: linear-gradient(-180deg, #f7f7f7 0%, #ededed 100%);
+ 
+    }
+        button.colortwo[data-color="Black"] {
+        background-image: linear-gradient(-180deg, #838383 0%, #444444 100%);
+        color: #ffffff;
+    }
+    button.colortwo[data-color="Gold"] {
+        background-image: linear-gradient(-180deg, #fff2b3 0%, #ffed92 100%);
+        color: #000;
+    }
+ .colors .colortwo {
+            width: 70px;
+        background-color: #444;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid #979797;
+        color: #000;
+        font-size: 15px;
+        margin: 2px;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        height: 41px;
+        align-items: center;
+    }
+ .colors .color {
+    background-color: #444;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #979797;
+    font-size: 15px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    height: 41px;
+    align-items: center;
+        width: 70px;
 }
 @media (max-width: 678px) {
 .bpw-powered {
@@ -583,15 +666,56 @@ button.color:focus:active {
         width: 50px;
         background-image: linear-gradient(-180deg, #fff2b3 0%, #ffed92 100%);
         color: #000;
-    }
+
     button.colorthree[data-color="Natural"] {
         width: 50px;
         background-image: linear-gradient(-180deg, #f7f7f7 0%, #ededed 100%);
  
     }
+            }
+    button.colortwo[data-color="Natural"] {
+        background-image: linear-gradient(-180deg, #f7f7f7 0%, #ededed 100%);
+ 
+    }
+        button.colortwo[data-color="Black"] {
+        background-image: linear-gradient(-180deg, #838383 0%, #444444 100%);
+        color: #ffffff;
+    }
+    button.colortwo[data-color="Gold"] {
+        background-image: linear-gradient(-180deg, #fff2b3 0%, #ffed92 100%);
+        color: #000;
+    }
     .colors .colorthree {
         background-color: #444;
-        color: #ddd;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid #979797;
+        color: #000;
+        font-size: 15px;
+        margin: 2px;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        height: 41px;
+        align-items: center;
+    }
+    .colors .color {
+    background-color: #444;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #979797;
+    font-size: 15px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    height: 41px;
+    align-items: center;
+        width: 70px;
+}
+        .colors .colortwo {
+            width: 70px;
+        background-color: #444;
         border-radius: 10px;
         cursor: pointer;
         border: 1px solid #979797;
@@ -629,6 +753,7 @@ flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     margin: 0 4px 0 4px;
+        justify-items: center;
 }
     #total-label {
         font-size: 25px;
@@ -696,7 +821,7 @@ flex-wrap: wrap;
     }
     #productList h2 {
         font-size: 15px;
-        color: gray;
+        color: #535353;
         margin: 5px;
         font-weight: 100;
     }
@@ -864,9 +989,7 @@ flex-wrap: wrap;
     .size {
         padding-right: 30px;
     }
-    #popup .popup-sizes {
-        justify-content: center;
-    }
+
     #popup-logo {
         width: 20%;
     }
@@ -947,6 +1070,7 @@ flex-wrap: wrap;
         font-size: 15px;
         margin-top: 5px;
         margin-bottom: 5px;
+        text-align: center;
     }
     #popup h2 {
         margin-top: 5px;
@@ -966,7 +1090,7 @@ flex-wrap: wrap;
         min-height: 150px;
     }
     #purchaseSummary p {
-        font-size: 15px;
+        font-size: 20px;
         margin: 10px 0;
     }
        button {
@@ -1103,6 +1227,7 @@ flex-wrap: wrap;
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Cria cinco colunas de tamanhos iguais */
         gap: 10px; /* Espaçamento entre as colunas e linhas */
+        justify-items: center;
     }
     }
 @media (min-width: 768px) {
@@ -1110,6 +1235,7 @@ flex-wrap: wrap;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Cria cinco colunas de tamanhos iguais */
     gap: 10px; /* Espaçamento entre as colunas e linhas */
+        justify-items: center;
 }
 }
 @media (min-width: 1024px) {
@@ -1196,9 +1322,7 @@ flex-wrap: wrap;
     .size {
         padding-right: 30px;
     }
-    #popup .popup-sizes {
-        justify-content: center;
-    }
+ 
     #popup-logo {
         width: 20%;
     }
@@ -1279,6 +1403,7 @@ flex-wrap: wrap;
         font-size: 15px;
         margin-top: 5px;
         margin-bottom: 5px;
+        text-align: center;
     }
     #popup h2 {
         margin-top: 5px;
@@ -1298,7 +1423,7 @@ flex-wrap: wrap;
         min-height: 150px;
     }
     #purchaseSummary p {
-        font-size: 15px;
+        font-size: 20px;
         margin: 10px 0;
     }
        button {
@@ -1522,10 +1647,53 @@ button.colorthree[data-color="Natural"] {
 
 }
 #productList h2 {
-    color: gray;
+    color: #535353;
     margin: 5px;
     font-weight: 100;
 }
 .product div.added-banner {
     z-index: 15!important;
+}
+@media (max-width: 678px) {
+.colors .color-large {
+    background-color: #444;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #979797;
+    font-size: 15px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    height: 41px;
+    align-items: center;
+    width: 80px;
+}
+    
+}
+
+#popup .popup-sizes {
+    display: flex; /* Faz com que os filhos (sizes) fiquem em linha */
+    overflow-x: auto; /* Permite rolagem horizontal se o conteúdo exceder a largura do elemento */
+    white-space: nowrap; /* Impede que os filhos quebrem a linha */
+    padding-bottom: 10px; /* Mantém um padding para a estética, ajuste conforme necessário */
+    max-width: 100%; /* Limita a largura máxima para evitar que o elemento cresça indefinidamente */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+    column-gap: 25px;
+    justify-content: flex-start;
+}
+
+#popup .popup-sizes .size {
+    flex: 0 0 auto; /* Impede que os itens sejam esticados ou encolhidos */
+    white-space: normal; /* Permite que o conteúdo dentro de cada size possa quebrar a linha normalmente */
+    display: inline-block; /* Trata cada size como um bloco, mas alinha-os em linha */
+}
+
+
+.special {
+justify-content: space-between!important;
+}
+
+.popup-title {
+    text-align: center;
 }
