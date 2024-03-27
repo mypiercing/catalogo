@@ -382,7 +382,7 @@ function getCartItemsText() {
       var totalText = "*Total: €" + document.getElementById("total").innerText + "*";
       var freightText = "Frete: *€" + freight.toFixed(2) + "*"; // Assuming "freight" is a global variable
       var message = encodeURIComponent("*Resumo da Compra:*\n\n" + cartText + freightText + "\n\n" + totalText);
-      window.open(`https://wa.me/5511989174080?text=${message}`);
+      window.open(`https://wa.me/393898986018?text=${message}`);
     });
   document.getElementById("copyButton").addEventListener("click", function () {
       var cartText = getCartItemsText();
